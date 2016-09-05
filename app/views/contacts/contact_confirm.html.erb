@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
+
+<h3>問い合わせ内容を確認する</h3>
+<%= form_for @contact do |f| %>
+
+<%= f.hidden_field :name %>
+<%= f.hidden_field :email %>
+<%= f.hidden_field :content %>
+
+<%= @contact.name %>
+<%= @contact.email %>
+<%= @contact.content %>
+
+<%= f.submit "送信する",class: 'btn btn-primary btn-block'  %>
+
+<% end %>
+
+<%= form_for(@contact, url: new_contact_path, method: 'get') do |f|  %>
+<%= f.hidden_field :name %>
+<%= f.hidden_field :email %>
+<%= f.hidden_field :content %>
+<%= f.submit "もどる", name: 'back' ,class: 'btn btn-primary btn-block'  %>
+<% end %>
+
+</div>
+</div>
