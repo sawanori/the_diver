@@ -50,7 +50,10 @@ ActiveRecord::Schema.define(version: 20160907080325) do
     t.string   "uid",                    default: "",    null: false
     t.string   "provider",               default: "",    null: false
     t.string   "image_url"
-    t.date     "confirmed_at"
+    t.datetime "confirmed_at"
+    t.string   "confirmation_token"
+    t.datetime "confirmation_sent_at"
+    t.string   "unconfirmed_email"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
