@@ -4,8 +4,8 @@ Devise.setup do |config|
 
 
 if Rails.env.deveropment?
-  config.omniauth :facebook, ENV["1068075436579018"], ENV["c5acc2451fb12a168309eacee2aaebe7"], scope: 'email', display: 'popup', info_fields: 'name, email'
-  config.omniauth :twitter, ENV["eXkRQHVFvSrh4IAcCGAn6qJOZ"], ENV["4cOnu55B0OcT2WbIHDcSaBATLBEMvnEUhNEVRmIxr93gZOOU68"], scope: 'email', display: 'popup', info_fields: 'name, email'
+  config.omniauth :facebook, ENV["FACEBOOK_ID_DEVELOPMENT"], ENV["FACEBOOK_SECRET_DEVELOPMENT"], scope: 'email', display: 'popup', info_fields: 'name, email'
+  config.omniauth :twitter, ENV["TWITTER_ID_DEVELOPMENT"], ENV["TWITTER_SECRET_DEVELOPMENT"], scope: 'email', display: 'popup', info_fields: 'name, email'
 end
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
